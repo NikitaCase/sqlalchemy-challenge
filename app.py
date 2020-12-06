@@ -65,11 +65,11 @@ def prcp():
     prcp_list =[]
     for date, prcp in precip:
         prcp_dict ={}
-        prcp_dict['date'] = date 
-        prcp_dict['prcp'] = prcp 
+        prcp_dict[date] = prcp 
         prcp_list.append(prcp_dict)
     return jsonify(prcp_list)
 
+    
 
 @app.route('/api/v1.0/tobs')
 def tobs():
